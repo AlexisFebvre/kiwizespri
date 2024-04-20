@@ -1,0 +1,180 @@
+/* GLOABAL VARIABLES */
+:root {
+    --peal: #9D5B03;
+    --chair: #93B000;
+    --center: #DAE474;
+    --seed: #411B00;
+    --text_discrete: #3B1E00;
+    --text_dark: #000000;
+}
+@font-face {
+    font-family: 'Asset';
+    src: url('Assets/Fonts/Asset-Regular.ttf')
+}
+
+/* PAGE RESET */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--peal);
+}
+
+
+/* HEADER */
+.header {  
+    min-height: 15vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Brand Name Title */
+.title#brand-name {
+    font-family: 'Asset';
+    text-shadow: #E5CC95 0.05em 0.05em;
+}
+
+
+/* CONTENT PANNEL */
+.content {
+    background-color: var(--chair);
+    color: var(--text_dark);
+    
+
+    position: static;
+    bottom: 0;
+
+    border-top-right-radius: 5em;
+    border-top-left-radius:  5em;
+
+    min-height: 90vh;
+    min-width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+/* ARTICLES */
+article {
+    transition: 0.2s;
+
+    font-size: large;
+
+    background-color: var(--center);
+    border-radius: 1em;
+    
+    min-width: 20vw;
+    max-width: 40vw;
+    padding: 2em;
+
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    box-shadow: #00000046 0.5em 0.5em ;
+
+}
+article:hover {
+    transition: 0.2s;
+
+    font-size: x-large;
+
+    min-width: 30vw;
+    max-width: 50vw;
+}
+
+
+/* LOGO ANIMATION */
+.container#logo {
+    position: absolute;
+    left: 10vw;
+    height: 15vw;
+    width: 15vw;
+    background-color: #000000;
+}
+
+img#pause, img#play {
+    position: absolute;
+    width: 5vw;
+    left: 5vw;
+    top: 5vw;
+    z-index: 2;
+
+    opacity: 0.7;
+
+}
+
+
+
+
+img#reader {
+    transition: 1s;
+
+    position: absolute;
+    left: 10vw;
+    height: 0vw;
+}
+/* Class that will be added when animation is triggered */
+#reader-animated {
+    position: absolute;
+    left: 10vw;
+    height: 0vw;
+
+    animation-name: reader-appear;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes reader-appear {
+    0% {
+        height: 0;
+        rotate: 0deg;
+    }
+    50% {
+        height: 17vw;
+        rotate: 0;
+    }
+    100% {
+        height: 15vw;
+        rotate: 0deg;
+    }
+}
+@keyframes reader-play {
+    0% {
+        height: 15vw;
+        rotate: 0deg;
+    }
+    100% {
+        height: 15vw;
+        rotate: 35deg;
+    }
+}
+
+img#logo {
+    position: absolute;
+    width: 15vw;
+    
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+img#logo-animated {
+    position: absolute;
+    width: 15vw;
+
+}
+@keyframes vinyl {
+    0%   { rotate: 0deg;   }
+    25%  { rotate: 90deg;  }
+    50%  { rotate: 180deg; }
+    75%  { rotate: 270deg; }
+    100% { rotate: 360deg; }
+}
