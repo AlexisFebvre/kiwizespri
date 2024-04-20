@@ -6,7 +6,7 @@ const play  = document.getElementById("play");
 const pause = document.getElementById("pause");
 
 // Audio
-const audio = new Audio(url("https://alexisfebvre.github.io/kiwizespri/Assets/Music/le_cake.mp3");
+const audio = new Audio("https://alexisfebvre.github.io/kiwizespri/Assets/Music/le_cake.mp3");
 document.body.appendChild(audio);
 
 
